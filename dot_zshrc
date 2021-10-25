@@ -9,6 +9,9 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
+# PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
 # Intellij IDEA
 export PATH="$PATH:~/apps/idea-IU-212.5284.40/bin"
 
@@ -34,9 +37,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Google Cloud
 export CLOUDSDK_PYTHON=/usr/bin/python3
-
-# PATH
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # SDKMAN
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
