@@ -24,6 +24,9 @@ jenv enable-plugin export
 # Created by `pipx` on 2021-10-13 00:35:09
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
+# Pyenv
+eval "$(pyenv init -)"
+
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -39,5 +42,3 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-eval "$(pyenv init -)"
-
