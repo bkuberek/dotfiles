@@ -9,34 +9,27 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
-# PATH
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
-# Intellij IDEA
-export PATH="$PATH:~/apps/idea-IU-212.5284.40/bin"
-
-# Keychain
-/usr/bin/keychain --nogui $HOME/.ssh/id_rsa
-source $HOME/.keychain/$HOSTNAME-sh
-
-# JENV
-export PATH="$HOME/.jenv/bin:$PATH"
+# Jenv init
 eval "$(jenv init -)"
 jenv enable-plugin export
 
-# Created by `pipx` on 2021-10-13 00:35:09
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
-# Pyenv
+# Pyenv init
 eval "$(pyenv init -)"
 
-# Node version manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Intellij IDEA path
+export PATH="$PATH:~/apps/idea/bin"
 
 # Google Cloud
 export CLOUDSDK_PYTHON=/usr/bin/python3
+
+# Node version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Keychain
+/usr/bin/keychain --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$(hostname)-sh
 
 # SDKMAN
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
